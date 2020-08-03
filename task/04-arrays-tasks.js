@@ -484,17 +484,11 @@ function toStringList(arr) {
  */
 function sortCitiesArray(arr) {
    return arr.sort((a, b) => {
-      if (a.country > b.country) {
-         return 1
+      if (a.country === b.country) {
+         return a.city > b.city ? 1 : -1;
       }
-      return -1
-   }).sort((a, b) => {
-      if (a.country === b.country && a.city < b.city) {
-         return 1
-      } else {
-         return -1
-      }
-    }).reverse();
+      return a.country > b.country ? 1 : -1
+   });
 }
 
 /**
