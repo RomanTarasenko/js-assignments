@@ -38,7 +38,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    return 2*Math.sqrt*radius;
+    return 2 * Math.PI * radius;
 }
 
 /**
@@ -164,7 +164,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a,b,c) {
-    return Math.sqrt((a**2 + b**2) + c**2)
+    return Math.sqrt((a*a + b*b) + c*c)
 }
 
 /**
@@ -188,7 +188,7 @@ function roundToPowerOfTen(num, pow) {
     if (pow === 0){
         return num;
     }
-    return Math.round(num/(10**pow)) * 10**pow;
+    return Math.round(num/Math.pow(10, pow)) * Math.pow(10, pow);
 }
 
 /**
@@ -210,7 +210,6 @@ function roundToPowerOfTen(num, pow) {
  */
 function isPrime(n) {
     for(let i = 2; i < n; i++) {
-        console.log(n, i)
         if(n % i === 0) {
             return false;
         }
