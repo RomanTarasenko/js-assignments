@@ -333,7 +333,7 @@ function get3TopItems(arr) {
  
  
 /**  
- *    
+ * Returns the number of positive numbers from specified array
  * 
  * @param {array} arr
  * @return {number}
